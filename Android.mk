@@ -14,6 +14,8 @@ LOCAL_SRC_FILES := \
     src/lauxlib.c \
     src/lbaselib.c \
     src/lcode.c \
+    src/lcorolib.c \
+    src/lctype.c \
     src/ldblib.c \
     src/ldebug.c \
     src/ldo.c \
@@ -37,9 +39,9 @@ LOCAL_SRC_FILES := \
     src/ltablib.c \
     src/ltm.c \
     src/lundump.c \
+    src/lutf8lib.c \
     src/lvm.c \
-    src/lzio.c \
-    src/print.c
+    src/lzio.c
 
 LOCAL_STATIC_LIBRARIES :=
 

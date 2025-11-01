@@ -1,4 +1,5 @@
-# -*- Makefile -*- for lua
+# Makefile for building Lua
+# See ../doc/readme.html for installation and customization instructions.
 
 ifneq ($(findstring $(MAKEFLAGS),s),s)
 ifndef V
@@ -24,6 +25,7 @@ HEADERS := lua.h luaconf.h lualib.h lauxlib.h
 SOURCES = \
     lapi.c \
     lcode.c \
+    lctype.c \
     ldebug.c \
     ldo.c \
     ldump.c \
@@ -43,13 +45,15 @@ SOURCES = \
     lzio.c \
     lauxlib.c \
     lbaselib.c \
+    lcorolib.c \
     ldblib.c \
     liolib.c \
     lmathlib.c \
-    loslib.c \
-    ltablib.c \
-    lstrlib.c \
     loadlib.c \
+    loslib.c \
+    lstrlib.c \
+    ltablib.c \
+    lutf8lib.c \
     linit.c
 
 SOURCES := $(shell echo $(SOURCES))
