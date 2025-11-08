@@ -62,6 +62,13 @@ OBJECTS := $(patsubst %.c,%.o,$(SOURCES))
 
 CFLAGS ?= -O2
 
+ifeq ($(uname_S),Linux)
+	CFLAGS += -DLUA_USE_LINUX
+endif
+ifeq ($(uname_S),Darwin)
+	CFLAGS += -DLUA_USE_MACOSX
+endif
+
 .PHONY: install
 
 all: $(LIB)
